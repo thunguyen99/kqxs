@@ -84,7 +84,7 @@ public class RSS_kqxs_XSMBSAXHandler extends DefaultHandler {
 		Map<String, String[]> result = new HashMap<String, String[]>();
 		XSMBLotteryEntry entry = new XSMBLotteryEntry();
 
-		String[] dbResult = getResultPath("ĐB\\:(.*)1\\:", 1, description);
+		String[] dbResult = getResultPath("B\\:(.*)1\\:", 1, description);
 		result.put(XSMBLotteryEntry.DB, dbResult);
 
 		String[] g1Result = getResultPath("1\\:(.*)2\\:", 1, description);

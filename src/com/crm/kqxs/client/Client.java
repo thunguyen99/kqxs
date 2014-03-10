@@ -18,11 +18,12 @@ public class Client {
 	 */
 	public static void main(String[] args) throws InterruptedException, ParseException {
 		DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-		Date orderdate = format.parse("05/03/2014");
+		Date orderdate = format.parse("09/03/2014");
+		
 		LotteryGetterFactory factory = new LotteryGetterFactory(orderdate);
 		LotteryGetter getter = factory.getXSMBLotteryGetter();
 		LotteryEntry kq = getter.getLottery();
-
+		
 		if (kq != null) {
 			while (kq != null && !kq.isFinished()) {
 				TimeUnit.SECONDS.sleep(5);
