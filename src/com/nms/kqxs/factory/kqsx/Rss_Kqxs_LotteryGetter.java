@@ -3,14 +3,11 @@ package com.nms.kqxs.factory.kqsx;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Date;
-
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import com.nms.kqxs.factory.LotteryGetter;
 import com.nms.kqxs.factory.kqsx.saxhandler.SAXHandler;
-import com.nms.kqxs.factory.kqsx.saxhandler.XSMBSAXHandler;
 import com.nms.kqxs.model.LotteryEntry;
 
 public class Rss_Kqxs_LotteryGetter implements LotteryGetter {

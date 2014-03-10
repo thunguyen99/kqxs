@@ -20,28 +20,28 @@ public class XSMTSAXHandler extends SAXHandler {
 		LotteryEntry entry = new XSMTLotteryEntry();
 
 		String[] dbResult = Common.getResultPath("B\\:(.*)1\\:", 1, description);
-		result.put(XSMTLotteryEntry.DB, dbResult);
+		result.put(LotteryEntry.DB, dbResult);
 
 		String[] g1Result = Common.getResultPath("1\\:(.*)2\\:", 1, description);
-		result.put(XSMTLotteryEntry.G1, g1Result);
+		result.put(LotteryEntry.G1, g1Result);
 
 		String[] g2Result = Common.getResultPath("2\\:(.*)3\\:", 1, description);
-		result.put(XSMTLotteryEntry.G2, g2Result);
+		result.put(LotteryEntry.G2, g2Result);
 
 		String[] g3Result = Common.getResultPath("3\\:(.*)4\\:", 1, description);
-		result.put(XSMTLotteryEntry.G3, g3Result);
+		result.put(LotteryEntry.G3, g3Result);
 
 		String[] g4Result = Common.getResultPath("4\\:(.*)5\\:", 1, description);
-		result.put(XSMTLotteryEntry.G4, g4Result);
+		result.put(LotteryEntry.G4, g4Result);
 
 		String[] g5Result = Common.getResultPath("5\\:(.*)6\\:", 1, description);
-		result.put(XSMTLotteryEntry.G5, g5Result);
+		result.put(LotteryEntry.G5, g5Result);
 
 		String[] g6Result = Common.getResultPath("6\\:(.*)7\\:", 1, description);
-		result.put(XSMTLotteryEntry.G6, g6Result);
+		result.put(LotteryEntry.G6, g6Result);
 
 		String[] g7Result = Common.getResultPath("7\\:(.*)8\\:", 1, description);
-		result.put(XSMTLotteryEntry.G7, g7Result);
+		result.put(LotteryEntry.G7, g7Result);
 		
 		String[] g8Result = Common.getResultPath("8\\:(.*)", 1, description);
 		result.put(XSMTLotteryEntry.G8, g8Result);
