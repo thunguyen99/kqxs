@@ -1,4 +1,4 @@
-package com.nms.kqxs.factory.xsmb.impl;
+package com.nms.kqxs.factory.kqsx;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -8,32 +8,36 @@ import java.util.Date;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import com.nms.kqxs.factory.xsmb.XSMBLotteryGetter;
-import com.nms.kqxs.model.impl.XSMBLotteryEntry;
+import com.nms.kqxs.factory.LotteryGetter;
+import com.nms.kqxs.factory.kqsx.saxhandler.SAXHandler;
+import com.nms.kqxs.factory.kqsx.saxhandler.XSMBSAXHandler;
+import com.nms.kqxs.model.LotteryEntry;
 
-public class RSS_kqxs_XSMBLotteryGetterImpl extends XSMBLotteryGetter {
-	private static final String link = "http://xskt.com.vn/rss-feed/mien-bac-xsmb.rss";
+public class Rss_Kqxs_LotteryGetter implements LotteryGetter {
+
+	private String	link;
+	private SAXHandler handler;
 	
-	public RSS_kqxs_XSMBLotteryGetterImpl(Date orderDate) {
-		this.orderDate = orderDate;
+	public Rss_Kqxs_LotteryGetter(String link, SAXHandler handler) {
+		this.link = link;
+		this.handler = handler;
 	}
 
 	@Override
-	protected XSMBLotteryEntry getXSMBLottery() throws Exception {
+	public LotteryEntry getLottery() throws Exception {
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 		URL url = new URL(link);
 		URLConnection conn = url.openConnection();
 		InputStream in = null;
 
-		XSMBLotteryEntry entry = null;
+		LotteryEntry entry = null;
 
 		try {
 			conn.connect();
 			in = conn.getInputStream();
 			SAXParser paser = factory.newSAXParser();
-			RSS_kqxs_XSMBSAXHandler handler = new RSS_kqxs_XSMBSAXHandler(orderDate);
 			paser.parse(in, handler);
-			entry = handler.entry;
+			entry = handler.getLotteryEntry();
 		} catch (Exception e) {
 			throw e;
 		} finally {
@@ -44,4 +48,5 @@ public class RSS_kqxs_XSMBLotteryGetterImpl extends XSMBLotteryGetter {
 
 		return entry;
 	}
+
 }

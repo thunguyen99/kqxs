@@ -1,0 +1,40 @@
+package com.nms.kqxs.factory.kqsx;
+
+public class KqxsConstants {
+	public static final String	MB				= "http://xskt.com.vn/rss-feed/mien-bac-xsmb.rss";
+	public static final String	ANGIANG			= "http://xskt.com.vn/rss-feed/an-giang-xsag.rss";
+	public static final String	BINHDUONG		= "http://xskt.com.vn/rss-feed/binh-duong-xsbd.rss";
+	public static final String	BINHDINH		= "http://xskt.com.vn/rss-feed/binh-dinh-xsbdi.rss";
+	public static final String	BACLIEU			= "http://xskt.com.vn/rss-feed/bac-lieu-xsbl.rss";
+	public static final String	BINHPHUOC		= "http://xskt.com.vn/rss-feed/binh-phuoc-xsbp.rss";
+	public static final String	BENTRE			= "http://xskt.com.vn/rss-feed/ben-tre-xsbt.rss";
+	public static final String	BINHTHUAN		= "http://xskt.com.vn/rss-feed/binh-thuan-xsbth.rss";
+	public static final String	CAMAU			= "http://xskt.com.vn/rss-feed/ca-mau-xscm.rss";
+	public static final String	CANTHO			= "http://xskt.com.vn/rss-feed/can-tho-xsct.rss";
+	public static final String	DALAC			= "http://xskt.com.vn/rss-feed/dac-lac-xsdlk.rss";
+	public static final String	DONGNAI			= "http://xskt.com.vn/rss-feed/dong-nai-xsdn.rss";
+	public static final String	DANANG			= "http://xskt.com.vn/rss-feed/da-nang-xsdng.rss";
+	public static final String	DACNONG			= "http://xskt.com.vn/rss-feed/dac-nong-xsdno.rss";
+	public static final String	DONGTHAP		= "http://xskt.com.vn/rss-feed/dong-thap-xsdt.rss";
+	public static final String	GIALAI			= "http://xskt.com.vn/rss-feed/gia-lai-xsgl.rss";
+	public static final String	TP_HCM			= "http://xskt.com.vn/rss-feed/tp-hcm-xshcm.rss";
+	public static final String	HAUGIANG		= "http://xskt.com.vn/rss-feed/hau-giang-xshg.rss";
+	public static final String	KIENGIANG		= "http://xskt.com.vn/rss-feed/kien-giang-xskg.rss";
+	public static final String	KHANHHOA		= "http://xskt.com.vn/rss-feed/khanh-hoa-xskh.rss";
+	public static final String	KOMTUM			= "http://xskt.com.vn/rss-feed/kon-tum-xskt.rss";
+	public static final String	LONGAN			= "http://xskt.com.vn/rss-feed/long-an-xsla.rss";
+	public static final String	LAMDONG			= "http://xskt.com.vn/rss-feed/lam-dong-xsld.rss";
+	public static final String	NINHTHUAN		= "http://xskt.com.vn/rss-feed/ninh-thuan-xsnt.rss";
+	public static final String	PHUYEN			= "http://xskt.com.vn/rss-feed/phu-yen-xspy.rss";
+	public static final String	QUANGBINH		= "http://xskt.com.vn/rss-feed/quang-binh-xsqb.rss";
+	public static final String	QUANGNGAI		= "http://xskt.com.vn/rss-feed/quang-ngai-xsqng.rss";
+	public static final String	QUANGNAM		= "http://xskt.com.vn/rss-feed/quang-nam-xsqnm.rss";
+	public static final String	QUANGTRI		= "http://xskt.com.vn/rss-feed/quang-tri-xsqt.rss";
+	public static final String	SOCTRANG		= "http://xskt.com.vn/rss-feed/soc-trang-xsst.rss";
+	public static final String	TIENGIANG		= "http://xskt.com.vn/rss-feed/tien-giang-xstg.rss";
+	public static final String	TAYNINH			= "http://xskt.com.vn/rss-feed/tay-ninh-xstn.rss";
+	public static final String	THUATHIENHUE	= "http://xskt.com.vn/rss-feed/thua-thien-hue-xstth.rss";
+	public static final String	TRAVINH			= "http://xskt.com.vn/rss-feed/tra-vinh-xstv.rss";
+	public static final String	VINHLONG		= "http://xskt.com.vn/rss-feed/vinh-long-xsvl.rss";
+	public static final String	VUNGTAU			= "http://xskt.com.vn/rss-feed/vung-tau-xsvt.rss";
+}

@@ -5,6 +5,15 @@ import java.util.Map;
 
 public abstract class LotteryEntry {
 
+	public static String	DB	= "GIAI DB";
+	public static String	G1	= "GIAI NHAT";
+	public static String	G2	= "GIAI NHI";
+	public static String	G3	= "GIAI BA";
+	public static String	G4	= "GIAI TU";
+	public static String	G5	= "GIAI NAM";
+	public static String	G6	= "GIAI SAU";
+	public static String	G7	= "GIAI BAY";
+
 	public LotteryEntry() {
 	}
 
@@ -36,9 +45,9 @@ public abstract class LotteryEntry {
 		return true;
 	}
 
-	protected String name;
-	protected Date date;
-	protected Map<String, String[]> result;
+	protected String				name;
+	protected Date					date;
+	protected Map<String, String[]>	result;
 
 	public String getName() {
 		return name;
@@ -89,23 +98,39 @@ public abstract class LotteryEntry {
 
 		return false;
 	}
-	
+
 	protected String paserResult(String[] array) {
 		StringBuilder sb = new StringBuilder();
-		
+
 		if (array != null) {
 			for (int i = 0; i < array.length; i++) {
 				sb.append(array[i] == null ? "" : array[i]);
-				if (i < array.length -1) {
+				if (i < array.length - 1) {
 					sb.append(" - ");
 				}
 			}
 		}
-		
+
 		return sb.toString();
 	}
 
 	public abstract Map<String, Integer> getStructureMap();
 
-	public abstract String toString();
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+
+		if (result != null) {
+			sb.append(DB).append(":\t").append(paserResult(result.get(DB))).append("\n");
+			sb.append(G1).append(":\t").append(paserResult(result.get(G1))).append("\n");
+			sb.append(G2).append(":\t").append(paserResult(result.get(G2))).append("\n");
+			sb.append(G3).append(":\t").append(paserResult(result.get(G3))).append("\n");
+			sb.append(G4).append(":\t").append(paserResult(result.get(G4))).append("\n");
+			sb.append(G5).append(":\t").append(paserResult(result.get(G5))).append("\n");
+			sb.append(G6).append(":\t").append(paserResult(result.get(G6))).append("\n");
+			sb.append(G7).append(":\t").append(paserResult(result.get(G7))).append("\n");
+		}
+
+		return sb.toString();
+	}
 }
